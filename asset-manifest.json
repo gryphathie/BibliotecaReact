@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/BibliotecaReact/static/css/main.a617e044.chunk.css",
+    "main.js": "/BibliotecaReact/static/js/main.71ff0555.chunk.js",
+    "main.js.map": "/BibliotecaReact/static/js/main.71ff0555.chunk.js.map",
+    "runtime-main.js": "/BibliotecaReact/static/js/runtime-main.3b5c8bfd.js",
+    "runtime-main.js.map": "/BibliotecaReact/static/js/runtime-main.3b5c8bfd.js.map",
+    "static/css/2.0a9ec390.chunk.css": "/BibliotecaReact/static/css/2.0a9ec390.chunk.css",
+    "static/js/2.68aa29b1.chunk.js": "/BibliotecaReact/static/js/2.68aa29b1.chunk.js",
+    "static/js/2.68aa29b1.chunk.js.map": "/BibliotecaReact/static/js/2.68aa29b1.chunk.js.map",
+    "static/js/3.b6cf2af3.chunk.js": "/BibliotecaReact/static/js/3.b6cf2af3.chunk.js",
+    "static/js/3.b6cf2af3.chunk.js.map": "/BibliotecaReact/static/js/3.b6cf2af3.chunk.js.map",
+    "index.html": "/BibliotecaReact/index.html",
+    "static/css/2.0a9ec390.chunk.css.map": "/BibliotecaReact/static/css/2.0a9ec390.chunk.css.map",
+    "static/css/main.a617e044.chunk.css.map": "/BibliotecaReact/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.68aa29b1.chunk.js.LICENSE.txt": "/BibliotecaReact/static/js/2.68aa29b1.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/BibliotecaReact/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3b5c8bfd.js",
+    "static/css/2.0a9ec390.chunk.css",
+    "static/js/2.68aa29b1.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.71ff0555.chunk.js"
+  ]
+}
