@@ -1,18 +1,26 @@
-import React from 'react';
-import { bookData } from './data';
+import React, { useState, useEffect } from 'react';
+import Books from './data.json';
 
-const Libros = ({id, name, init_date, end_date, status, taken_by, borrowed}) => {
+const Libros = ({ datos }) => {
+  const data = datos.map((book) =>
+      <>
+      <tr key={book.id}>
+        <td>{book.id}</td>
+        <td>{book.name}</td>
+        <td>{book.init_date}</td>
+        <td>{book.end_date}</td>
+        <td>{book.status}</td>
+        <td>{book.taken_by}</td>
+        <td>{book.borrowed? 'Si' : 'No'}</td>
+      </tr>
+      </>
+  )
 
   return (
-    <tr>
-      <td>{id}</td>
-      <td>{name}</td>
-      <td>{init_date}</td>
-      <td>{end_date}</td>
-      <td>{status}</td>
-      <td>taken_by</td>
-      <td>borrowed</td>
-    </tr>
+    <>
+    {data}
+    </>
   );
 }
+
 export default Libros;
