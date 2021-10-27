@@ -52,5 +52,131 @@
     "status": "Retrasado",
     "taken_by": "445566",
     "borrowed": true
+  },
+  {
+    "id": 7,
+    "name": "Crespúsculo",
+    "init_date": "",
+    "end_date": "",
+    "status": "En estante",
+    "taken_by": "",
+    "borrowed": false
+  },
+  {
+    "id": 8,
+    "name": "El Principito",
+    "init_date": "",
+    "end_date": "",
+    "status": "En estante",
+    "taken_by": "",
+    "borrowed": false
+  },
+  {
+    "id": 9,
+    "name": "El diario de Ana Frank",
+    "init_date": "",
+    "end_date": "",
+    "status": "En estante",
+    "taken_by": "",
+    "borrowed": false
+  },
+  {
+    "id": 10,
+    "name": "100 años de soledad",
+    "init_date": "",
+    "end_date": "",
+    "status": "En estante",
+    "taken_by": "",
+    "borrowed": false
+  },
+  {
+    "id": 11,
+    "name": "La casa de los espíritus",
+    "init_date": "",
+    "end_date": "",
+    "status": "En estante",
+    "taken_by": "",
+    "borrowed": false
+  },
+  {
+    "id": 12,
+    "name": "Drácula",
+    "init_date": "",
+    "end_date": "",
+    "status": "En estante",
+    "taken_by": "",
+    "borrowed": false
+  },
+  {
+    "id": 13,
+    "name": "La divina comedia",
+    "init_date": "",
+    "end_date": "",
+    "status": "En estante",
+    "taken_by": "",
+    "borrowed": false
+  },
+  {
+    "id": 14,
+    "name": "Don Quijote de la mancha",
+    "init_date": "",
+    "end_date": "",
+    "status": "En estante",
+    "taken_by": "",
+    "borrowed": false
+  },
+  {
+    "id": 15,
+    "name": "La hermandad de los dragones",
+    "init_date": "",
+    "end_date": "",
+    "status": "En estante",
+    "taken_by": "",
+    "borrowed": false
+  },
+  {
+    "id": 16,
+    "name": "La rueda de la vida",
+    "init_date": "",
+    "end_date": "",
+    "status": "En estante",
+    "taken_by": "",
+    "borrowed": false
+  },
+  {
+    "id": 17,
+    "name": "El gusano de seda",
+    "init_date": "",
+    "end_date": "",
+    "status": "En estante",
+    "taken_by": "",
+    "borrowed": false
+  },
+  {
+    "id": 18,
+    "name": "Amar lo que es",
+    "init_date": "",
+    "end_date": "",
+    "status": "En estante",
+    "taken_by": "",
+    "borrowed": false
+  },
+  {
+    "id": 19,
+    "name": "El psicoanalísta",
+    "init_date": "",
+    "end_date": "",
+    "status": "En estante",
+    "taken_by": "",
+    "borrowed": false
+  },
+  {
+    "id": 20,
+    "name": "La Tempestad",
+    "init_date": "17/10/2021",
+    "end_date": "27/10/2021",
+    "status": "En estante",
+    "taken_by": "",
+    "borrowed": true
   }
 ]

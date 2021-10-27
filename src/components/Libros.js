@@ -14,7 +14,9 @@ const Libros = ({ datos }) => {
         <td>{book.borrowed? 'Si' : 'No'}</td>
       </tr>
       </>
+  
   )
+
 
   return (
     <>

@@ -2,18 +2,24 @@ import React, { useState } from 'react';
 import Tabla from './Tabla';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import Alert from 'react-bootstrap/Alert';
 import Books from './data.json';
 import logo from './../images/logo.png';
 
 
 const Biblioteca = () => {
+  const [bookBorrowed, setBookBorrowed] = useState("");
+  const [taken, setTaken] = useState("");
+  const lista = ["112233", "223344", "178294", 178294];
+  const [prestamo, setPrestamo] = useState(false);
   const [datos, setDatos] = useState(Books.map((libro) => libro));
+  const blacklist = datos.map((user) => user.taken_by);
   const selectId = Books.map((ids) =>
-    <option>{ids.id}</option>
+    <option key = {ids.id}>{ids.name}</option>
     );
 
   const [matricula, setMatricula] = useState("");
-  const [book, setBook] = useState(0);
+  const [book, setBook] = useState("");
 
   let retorno = 100 * 60 * 60 * 24 * 100;
   let hoy = new Date(),
@@ -33,20 +39,25 @@ const Biblioteca = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     const intBook = Number(book);
-    const order = datos.find(bk => bk.id === intBook);
+    const order = datos.find(bk => bk.name === book);
     if (order.borrowed === true){
       alert("El libro no esta disponible")
-    }else if (order.borrowed === false && matricula !== ""){
+    }else if (order.borrowed === false && matricula !== "" && (blacklist.findIndex((us)=> us === matricula)) <=0 ){
       alert("Se aparto el libro con exito!")
       const newDatos = [...datos];
-      const dato = newDatos.find((dato) => dato.id === intBook);
+      const dato = newDatos.find((dato) => dato.name === book);
       dato.init_date = fecha;
       dato.end_date = fin;
       dato.status = "En tiempo";
       dato.taken_by = matricula;
       dato.borrowed = !dato.borrowed;
       setDatos(newDatos);
-    } else {
+      setTaken(matricula);
+      setBookBorrowed(book);
+      setPrestamo(true);
+    } else if (blacklist.findIndex((us)=> us === matricula) > 0 && matricula !== ""){
+      alert("Tu cuenta ya tiene un libro asignado. Devuelve el prestamos que solicitaste para poder apartar otro libro")
+    }else if(matricula === ""){
       alert("Datos incorrectos o incompletos")
     }
   }
@@ -104,9 +115,29 @@ const Biblioteca = () => {
             </Form>
           </div>
         </div>
-        <div className="col">
+
+          {prestamo === false ?(
+            <>
+            <div className="col">
+            </div>
+            </>
+          ):(
+            <>
+            <div className="col">
+              <div className="card border border-2 shadow p-4">
+                <h3 className="text-center"> Prestamos solicitado: </h3>
+                <span className="border-bottom"></span>
+                <h4 className="pt-2"> Titulo: {bookBorrowed} </h4>
+                <h4 className="pt-2"> Matricula: {taken}</h4>
+                <h4 className="pt-2"> Fecha de devolucion: {fin}</h4>
+                <br/>
+                <p className="text-center pt-2 mb-5">Presentate con tu credencial para recoger el libro</p>
+              </div>
+            </div>
+            </>
+
+          )}
         </div>
-    </div>
     </div>
     </div>
     </>
